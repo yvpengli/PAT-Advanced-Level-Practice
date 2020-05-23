@@ -1,6 +1,10 @@
 # PAT-Advanced-Level-Practice
 PAT甲级题库练习题
+
 68. Find More Coins
+题意：
+给定一系列的硬币值, 然后给定一个目标value， 从所有硬币中找出几个, 使得这几个硬币的和正好等于这个value, 而且这个硬币序列应该是满足硬币值字典序的最小序列.
+本题是典型的背包问题，使用动态规划，也可以使用DFS递归，但是最后一个测试点会超时。
 
 Eva loves to collect coins from all over the universe, including some other planets like Mars. One day she visited a universal shopping mall which could accept all kinds of coins as payments. However, there was a special requirement of the payment: for each bill, she must pay the exact amount. Since she has as many as 104 coins with her, she definitely needs your help. You are supposed to tell her, for any given amount of money, whether or not she can find some coins to pay for it.
 
@@ -15,6 +19,17 @@ For each test case, print in one line the face values V1 <= V2 <= ... <= Vk such
 Note: sequence {A[1], A[2], ...} is said to be "smaller" than sequence {B[1], B[2], ...} if there exists k >= 1 such that A[i]=B[i] for all i < k, and A[k] < B[k].
 
 72.Gas Station
+题意：在几个候选的建站点里选一个结点建汽油站，让这个结点到各个居民点的距离满足:(按优先级条件递减)
+
+1.到各个居民点的距离必须小于等于 加油站的最大服务距离Ds。
+
+2.再满足1的加油站点中，优先选择min_dis最大的那个点。（就是说每一个候选点都能求出一个最短距离数组dis[],这个数组里的最小值就是min_dis,取几个候选站点中min_dis最大的那个作为站点）
+
+3.如果2不唯一，则优先选择ave_dis最小的作为站点。
+
+4.如果3不唯一，则优先选择标号最小的作为站点。
+
+典型的单源最短路径问题，用Dijkstra算法
 
 A gas station has to be built at such a location that the minimum distance between the station and any of the residential housing is as far away as possible. However it must guarantee that all the houses are in its service range.
 
