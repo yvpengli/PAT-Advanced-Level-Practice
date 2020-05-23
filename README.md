@@ -2,6 +2,7 @@
 PAT甲级题库练习题
 
 68. Find More Coins
+
 题意：
 给定一系列的硬币值, 然后给定一个目标value， 从所有硬币中找出几个, 使得这几个硬币的和正好等于这个value, 而且这个硬币序列应该是满足硬币值字典序的最小序列.
 本题是典型的背包问题，使用动态规划，也可以使用DFS递归，但是最后一个测试点会超时。
@@ -19,6 +20,7 @@ For each test case, print in one line the face values V1 <= V2 <= ... <= Vk such
 Note: sequence {A[1], A[2], ...} is said to be "smaller" than sequence {B[1], B[2], ...} if there exists k >= 1 such that A[i]=B[i] for all i < k, and A[k] < B[k].
 
 72.Gas Station
+
 题意：在几个候选的建站点里选一个结点建汽油站，让这个结点到各个居民点的距离满足:(按优先级条件递减)
 
 1.到各个居民点的距离必须小于等于 加油站的最大服务距离Ds。
